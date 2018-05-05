@@ -1,7 +1,10 @@
 package mr.doom.leetcode;
 
 public class TreeLinkNode {
-	TreeLinkNode left;
-    TreeLinkNode right;
-    TreeLinkNode next;
+	int val;
+	TreeLinkNode left, right, next;
+
+	TreeLinkNode(int x) {
+		val = x;
+	}
 }
