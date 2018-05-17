@@ -1,5 +1,9 @@
 package suanfa;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class beibaowenti {
@@ -22,6 +26,11 @@ public class beibaowenti {
 
 		int value = knap(10);
 		System.out.println(value);
+		
+		
+		
+		
+		
 	}
 	
 	public static int knap(int cap) {
