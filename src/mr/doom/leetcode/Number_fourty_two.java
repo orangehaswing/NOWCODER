@@ -12,10 +12,26 @@ public class Number_fourty_two {
 		// cur要插入的位置在sortedList的哪里呢？就是此处代码中node的后面。
 		// 经过这么一轮，一个节点就被加入到了sortlist。之后同理。
 		
-		if (head == null) {
-			return null;
+		if (head == null || head.next == null) {
+			return head;
+		}
+		
+		ListNode temp = new ListNode(0);
+		ListNode p,q,t;
+		
+		while(head != null) {
+			p = temp;
+			q = p.next;
+			t = head;
+			head = head.next;
+			while(q != null && q.val < t.val) {
+				p = p.next;
+				q = q.next;
+			}
+			t.next = q;
+			p.next = t;
 		}
 
-		return head;
+		return temp.next;
 	}
 }
